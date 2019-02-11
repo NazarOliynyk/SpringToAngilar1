@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:xmlns:th="http://www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title> Spring To  Angular - 1 </title>
+</head>
+<body>
+<h2>
+    USER LIST
+</h2>
+
+<h3>Log In</h3>
+
+<form action="/loginationPage" method="get">
+    <input type="submit" name="" placeholder="" value="Go to Logination Page"/>
+</form>
+
+<h3> Adding a new User</h3>
+<!--pressing submit saves a new commodity and calls post method @PostMapping("/saveUser")-->
+<form action="/saveUser" method="post">
+
+    <input type="text" name="logIn" placeholder="logIn" />
+
+    <input type="text" name="password" placeholder="password" />
+
+    <input type="text" name="name" placeholder="name" />
+
+    <input type="text" name="surname" placeholder="surname"/>
+
+    <input type="email" name="email" placeholder="email"/>
+
+    <input type="text" name="DOB" placeholder="DOB"/>
+
+    <input type="submit" name="" placeholder="" value="SAVE"/>
+
+</form>
+
+<h3>Selecting all list of users</h3>
+
+<form action="/selectAllUsers" method="get">
+    <input type="submit" name="" placeholder="" value="Select All users"/>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:xmlns:th="http://www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>The list off all users</title>
+    <style>
+        .flex-container1-div{
+            background-color: beige;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 10px
+        }
+        .flex-container-5 {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+
+<h3> The list of all users:</h3>
+
+<div class="flex-container-5">
+
+    <div class="flex-container1-div" th:each="u : ${users}">
+
+        <div  th:text="${u.id +'. '+u.name +', '+u.surname+', '+u.DOB}">
+
+        </div>
+
+    </div>
+
+</div>
+
+<form action="/backToMainPage" method="get">
+    <input type="submit" name="" placeholder="" value="Get back to the Main Page"/>
+</form>
+
+</body>
+</html>
