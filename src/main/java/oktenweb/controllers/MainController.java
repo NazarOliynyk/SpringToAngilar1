@@ -16,28 +16,33 @@ public class MainController {
 
     @Autowired
     UserDAO userDAO;
+// ---------------------------------------------------------------------------------
+// the following methods are needed to navigate between templates
+// to test the back end only
 
-    @GetMapping("/")
-    public String callPage(){
-        return "index";
-    }
+//    @GetMapping("/")
+//    public String callPage(){
+//        return "index";
+//    }
+//
+//    @GetMapping("/loginationPage")
+//    public String loginationPage(){
+//        return "logination";
+//    }
+//
+//    @GetMapping("/backToMainPage")
+//    public String backToMainPage(){
+//        return "index";
+//    }
+//
+//    @GetMapping("/selectAllUsers")
+//    public String allUsers(Model model){
+//        model.addAttribute("users", userDAO.findAll());
+//        return "select1";
+//    }
 
-    @GetMapping("/loginationPage")
-    public String loginationPage(){
-        return "logination";
-    }
-
-    @GetMapping("/backToMainPage")
-    public String backToMainPage(){
-        return "index";
-    }
-
-    @GetMapping("/selectAllUsers")
-    public String allUsers(Model model){
-        model.addAttribute("users", userDAO.findAll());
-        return "select1";
-    }
-
+// ------------------------------------------------------------------------------------------
+// the following methods are no longer needed since they are duplicated in MainRestControllers
 
 //    @PostMapping("/saveUser")
 //    public String save(
